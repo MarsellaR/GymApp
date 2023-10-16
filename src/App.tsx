@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/scenes/navbar"; /* automatski prepoznaje da se radi o fajlu index.tsx ne trebamo dodatno pisati /index.tsx */
 import { SelectedPage } from "@/shared/types";
+import Home from "@/scenes/home"
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -22,6 +23,7 @@ function App() {
     <>
       <div className="app bg-gray20">
         <Navbar isTopOfPage={isTopPOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        <Home  setSelectedPage={setSelectedPage}/>
       </div>
     </>
   );
